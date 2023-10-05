@@ -1,0 +1,322 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:opsz,wght@9..144,700;9..144,900&display=swap");
+
+/* font-family: 'Barlow', sans-serif;
+font-family: 'Fraunces', serif; */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Fraunces", serif;
+}
+header {
+  padding: 30px 70px;
+  width: 100%;
+  background: url(images/desktop/image-header.jpg);
+  background-position: center;
+  background-size: cover;
+  min-height: 590px;
+}
+.hamburger {
+  display: none;
+}
+header .nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 100px;
+  font-family: "Barlow", sans-serif;
+  font-size: 18px;
+}
+header .logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+}
+header .navbar ul {
+  display: flex;
+}
+header .navbar li {
+  margin-left: 30px;
+  list-style-type: none;
+}
+header .navbar li a {
+  text-decoration: none;
+  color: white;
+}
+header .navbar li a.last-child {
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 15px;
+  background-color: white;
+  color: black;
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+header .content {
+  text-align: center;
+}
+header .content h1 {
+  font-size: 45px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 50px;
+  color: white;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: 420px;
+  width: 100%;
+  background-color: red;
+}
+.grid-container img {
+  width: 100%;
+  height: 100%;
+}
+.transform,
+.stand {
+  background-color: white;
+  padding: 70px;
+}
+.transform h2,
+.stand h2 {
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.transform p,
+.stand p {
+  font-size: 16px;
+  line-height: 25px;
+  font-family: "Barlow", sans-serif;
+  margin-bottom: 25px;
+  color: hsl(213, 9%, 39%);
+}
+.transform h4 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: hsl(51, 100%, 49%);
+  text-underline-offset: 3px;
+}
+.stand h4 {
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-decoration-color: hsl(7, 99%, 70%);
+  text-underline-offset: 3px;
+}
+.grid-container .design {
+  background: url(images/desktop/image-graphic-design.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 70px;
+  text-align: center;
+}
+.grid-container .photography {
+  background: url(images/desktop/image-photography.jpg);
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  position: relative;
+  padding: 70px;
+}
+.content2 {
+  padding-top: 150px;
+}
+.content2 h2 {
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: hsl(167, 40%, 24%);
+}
+.content2 p {
+  font-size: 16px;
+  line-height: 25px;
+  font-family: "Barlow", sans-serif;
+  color: hsl(167, 40%, 24%);
+}
+
+.content3 {
+  padding-top: 150px;
+}
+.content3 h2 {
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  color: hsl(198, 62%, 26%);
+}
+.content3 p {
+  font-size: 16px;
+  line-height: 25px;
+  font-family: "Barlow", sans-serif;
+  color: hsl(198, 62%, 26%);
+}
+/* section */
+section {
+  text-align: center;
+  padding: 100px 50px;
+}
+section .head {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: hsl(213, 9%, 39%);
+}
+.section-container {
+  display: flex;
+  gap: 20px;
+}
+.section-container img {
+  margin: 40px 0px;
+}
+.section-container p {
+  margin-bottom: 30px;
+  color: hsl(213, 9%, 39%);
+  font-weight: 600;
+}
+.section-container img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.section-container .b p {
+  color: hsl(232, 10%, 55%);
+}
+.section-container h4 {
+  margin-bottom: 10px;
+}
+/* aside */
+aside {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+aside img {
+  width: 100%;
+}
+footer {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: hsl(168, 34%, 70%);
+  color: hsl(168, 34%, 40%);
+}
+footer h2 {
+  margin-bottom: 40px;
+  color: hsl(167, 40%, 24%);
+  font-weight: 900;
+}
+footer .contact {
+  display: flex;
+  margin-bottom: 50px;
+}
+footer .contact p {
+  margin-left: 40px;
+  font-size: 17px;
+  font-family: "Barlow", sans-serif;
+}
+footer .social img {
+  margin-left: 20px;
+}
+@media (max-width: 840px) {
+  header .nav {
+    position: relative;
+  }
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 0;
+  }
+  .navbar ul {
+    flex-direction: column;
+    text-align: center;
+    min-width: 80%;
+    background-color: white;
+    padding: 30px 0px;
+    position: fixed;
+    top: 65px;
+    right: 50px;
+    transform: translate(10000px);
+    transition: transform 0.6s ease-in-out;
+  }
+  ul.active {
+    transform: translate(0);
+  }
+  header .navbar li {
+    margin-bottom: 20px;
+    margin-left: 0px;
+  }
+  header .navbar li a {
+    color: hsl(213, 9%, 39%);
+  }
+  header .navbar li a.last-child {
+    background-color: yellow;
+    font-weight: 700;
+    padding: 10px 15px;
+    font-size: 16px;
+  }
+}
+@media (max-width: 730px) {
+  header {
+    padding: 20px 50px;
+  }
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  section {
+    padding: 80px 30px;
+  }
+  .section-container {
+    flex-direction: column;
+    gap: 10px;
+  }
+  aside {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    padding: 20px;
+  }
+  .transform,
+  .stand {
+    background-color: white;
+    padding: 70px 40px;
+  }
+  .grid-container .design {
+    padding: 70px 30px;
+  }
+  .grid-container .photography {
+    padding: 70px 30px;
+  }
+  aside {
+    flex-direction: column;
+    gap: 0;
+  }
+  footer {
+    padding: 40px 20px;
+  }
+}
+@media (max-width: 400px) {
+  header .content h1 {
+    font-size: 40px;
+  }
+  section .head {
+    font-size: 20px;
+  }
+  .transform,
+  .stand {
+    background-color: white;
+    padding: 70px 30px;
+  }
+}
