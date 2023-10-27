@@ -26,6 +26,9 @@ header {
 }
 .hamburger {
   display: none;
+  width: 24px;
+  height: 18px;
+  filter: grayscale(100%) brightness(0) invert(1);
 }
 header .nav {
   display: flex;
@@ -76,7 +79,8 @@ header .content h1 {
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-auto-rows: 420px;
+  grid-auto-rows: minmax(420px, auto);
+
   width: 100%;
   background-color: red;
 }
@@ -88,6 +92,7 @@ header .content h1 {
 .stand {
   background-color: white;
   padding: 70px;
+  min-height: 420px;
 }
 .transform h2,
 .stand h2 {
@@ -229,46 +234,61 @@ footer .social img {
   margin-left: 20px;
 }
 @media (max-width: 840px) {
+  header {
+    padding: 0rem;
+  }
   header .nav {
     position: relative;
+    background-color: rgb(20, 165, 227);
+    padding: 1rem 2rem;
+    box-shadow: 0px 2px 16px hsla(0, 0, 0, 0.2);
   }
   .hamburger {
     display: block;
     position: absolute;
-    right: 0;
+    right: 2rem;
   }
   .navbar ul {
     flex-direction: column;
-    text-align: center;
-    min-width: 80%;
-    background-color: white;
-    padding: 30px 0px;
-    position: fixed;
-    top: 65px;
-    right: 50px;
-    transform: translate(10000px);
-    transition: transform 0.6s ease-in-out;
+    width: 100%;
+    background-color: rgb(20, 165, 227);
+    padding: 30px;
+    position: absolute;
+    top: 3.4rem;
+    right: 0%;
+    height: calc(100vh - 3rem);
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    overflow: hidden;
   }
   ul.active {
-    transform: translate(0);
+    opacity: 1;
   }
   header .navbar li {
-    margin-bottom: 20px;
+    margin-bottom: 2.5rem;
     margin-left: 0px;
   }
   header .navbar li a {
-    color: hsl(213, 9%, 39%);
+    color: white;
+  }
+  header .navbar li:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   header .navbar li a.last-child {
     background-color: yellow;
     font-weight: 700;
     padding: 10px 15px;
     font-size: 16px;
+    width: 60%;
+    text-align: center;
+    border-radius: 1rem;
   }
 }
 @media (max-width: 730px) {
   header {
-    padding: 20px 50px;
+    padding: 0;
   }
   .grid-container {
     grid-template-columns: 1fr;
@@ -286,12 +306,15 @@ footer .social img {
 }
 @media (max-width: 600px) {
   header {
-    padding: 20px;
+    padding: 0;
   }
   .transform,
   .stand {
     background-color: white;
     padding: 70px 40px;
+  }
+  header .navbar li a.last-child {
+    width: 100%;
   }
   .grid-container .design {
     padding: 70px 30px;
